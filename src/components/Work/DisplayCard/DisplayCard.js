@@ -11,18 +11,18 @@ export const DisplayCard = (props) => {
                     <p>
                         {props.des}
                     </p>
+                    <div className="tech">
+                        <ul>
+                            {props.tech.map(tName => <li>{tName}</li>)}
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Source Code</p>
+                    </div>
                 </div>
                 <div className="Image">
                     <img src="https://avatars.githubusercontent.com/u/70423224?v=4" />
                 </div>
-            </div>
-            <div className="tech">
-                <ul>
-                    {props.tech.map(tName => <li>{tName}</li>)}
-                </ul>
-            </div>
-            <div>
-                <p>Source Code</p>
             </div>
         </div>
     )
