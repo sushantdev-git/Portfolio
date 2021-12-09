@@ -1,0 +1,19 @@
+.Button{
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Button div{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+@media (min-width:780px) {
+    .Button{
+        display: none;
+    }
+}

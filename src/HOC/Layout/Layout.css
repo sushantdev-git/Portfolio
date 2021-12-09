@@ -1,0 +1,12 @@
+.Layout{
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#23272D;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}

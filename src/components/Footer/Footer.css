@@ -1,0 +1,18 @@
+.Footer{
+    height: 50px;
+    width: 80%;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+}
+
+.Footer ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Footer ul li{
+    list-style: none;
+}

@@ -1,0 +1,18 @@
+.Work{
+    min-height: 100%;
+    width: 80%;
+    margin-top: 100px;
+    background-color:#23272D;
+    color: white;
+    overflow-x: wrap;
+}
+
+.Work h1{
+    font-size: 50px;
+}
+
+@media (max-width:450px) {
+    .Work{
+        width: 90%;
+    }
+}
