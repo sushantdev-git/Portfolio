@@ -9,14 +9,14 @@ const Header = (props) => {
         <div className={classes.Header}>
             <div className={classes.HeaderContent}>
                 <ul>
-                    <li onClick={() => navigate.push({
+                    <li onClick={() => navigate.replace({
                             pathname: '/about',
                         })}>About</li>
-                    <li onClick={() => navigate.push({ 
+                    <li onClick={() => navigate.replace({ 
                             pathname:'/work',
                         })}>Work</li>
-                    <li onClick={() => navigate.push({ 
-                            pathname:'./work'
+                    <li onClick={() => navigate.replace({ 
+                            pathname:'./work',
                         })}>Contact</li>
                 </ul>
                 <Button clicked={props.toggleSidePanel}/>
