@@ -1,15 +1,31 @@
 import React, { Component } from "react";
 import Header from "../../components/Header/Header";
-import './Layout.css';
-import { Footer } from "../../components/Footer/Footer";
+import classes from './Layout.css';
+import {SidePanel} from '../../components/UI/SidePanel/SidePanel';
+import ImageViewer from '../../components/UI/ImageViewer/ImageViewer';
 class Layout extends Component {
 
+    state = {
+        isSidePanelVisible:false,
+    }
+
+    setSidePanel = (val) => {
+        this.setState({
+            isSidePanelVisible:val,
+        })
+    }
+
+
     render(){
+
+        
+
         return(
-            <div className="Layout">
-                <Header/>
+            <div className={classes.Layout}>
+                <Header toggleSidePanel={() => this.setSidePanel(!this.state.isSidePanelVisible)}/>
                 {this.props.children}
-                {/* <Footer /> */}
+                <SidePanel toggleSidePanel={this.setSidePanel} show={this.state.isSidePanelVisible}/>
+                <ImageViewer/>
             </div>
         )
     }

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import './Work.css';
-import { DisplayCard } from "../../components/Work/DisplayCard/DisplayCard";
+import classes from './Work.css';
+import DisplayCard from "../../components/Work/DisplayCard/DisplayCard";
+import {Footer} from '../../components/Footer/Footer';
+import {motion} from 'framer-motion';
+
 class Work extends Component {
     state = {
         projects: [
@@ -8,32 +11,66 @@ class Work extends Component {
                 title:'Tooler',
                 subDes:'This is a Time management app. | By Me',
                 des:'Things you can do - You can add/delete todo, reminder, timetable.You also get notification according to reminder and timetable. You can also see how much time you are spending where according to your timetable.',
-                thumb:"https://avatars.githubusercontent.com/u/70423224?v=4",
+                thumb:"https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=347&q=80",
                 tech:[
                     'Flutter', 'Sqlite',
                 ]
             },
             {
-                title:'StudyBooth',
+                title:'Study-Booth',
                 subDes:'This is Social Media Platform. | Done in Group ',
                 des:'A social media and classroom based project made for students and working employee for share their ideasand work together. Things you can do - Create a post, like a post, comment on a post, delete a post, deletecomment, reply on comment, refresh your feed, filter your feed, follow/Unfollow a user, search a user.',
-                thumb:"https://avatars.githubusercontent.com/u/70423224?v=4",
+                thumb:"https://raw.githubusercontent.com/sushantdeveloper/shopper/master/image/3.jpg",
                 tech:[
                     'ReactJs', 'Django',
+                ]
+            },
+            {
+                title:'Chatoo',
+                subDes:'A chat application. | By Me',
+                des:'You can chat in real time.',
+                thumb:"https://images.unsplash.com/photo-1601541984851-6779505c272c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                tech:[
+                    'Flutter', 'Firebase',
+                ],
+                images: [
+                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/3.jpg",
+                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/2.jpg",
+                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/4.jpg",
+                ]
+            },
+            {
+                title:'Trade-n-Build',
+                subDes:'A platform to trade | Done in Group',
+                des:'You can see stock price of different companies, compare them and buy them.',
+                thumb:"https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+                tech:[
+                    'HTML', 'CSS', 'JQuery',
                 ]
             },
         ]
     }
 
+    componentDidMount(){
+        console.log(this.props)
+    }
     render(){
 
         let displayCards = null;
 
         displayCards = this.state.projects.map((project,i) => <DisplayCard ind={i} key={i} {...project}/>)
         return(
-            <div className="Work">
-                <h1>Some of my works</h1>
-                {displayCards}
+            <div className={classes.Work}>
+                <motion.div
+                initial={{opacity:0, transform:'translateY(100%)',}}
+                animate={{opacity:1,transform:'translateY(0%)'}}
+                exit={{opacity:0,transform:'translateY(100%)'}}
+                transition={{duration:0.5}}
+                >
+                    <h1>Some of my works</h1>
+                    {displayCards}
+                    <Footer />
+                </motion.div>
             </div>
         )
     }

@@ -14,7 +14,7 @@
 }
 .Text h1{
     font-size: 70px;
-    line-height: 50px;
+    line-height: 100px;
 }
 .Text h2{
     font-size: 40px;
@@ -35,7 +35,9 @@
     color: cadetblue;
 }
 
-p{
+p{  
+    font-family: sans-serif;
+    margin:10px 0px;
     font-size: 20px;
     font-weight: lighter;
 }
@@ -46,8 +48,8 @@ p{
     justify-content: center;
 }
 .Image img{
-    border-radius: 30px;
     max-width: 100%;
+    border: 2px solid white;
 }
 
 @media (max-width:860px) {
@@ -57,6 +59,7 @@ p{
     }
     .Text{
         width: 100%;
+        padding-right: 0px;
     }
     .Image{
         width: 90%;
@@ -87,7 +90,7 @@ p{
     h3{
         font-size: 16px;
     }
-    p{
+    p{  
         font-size: 15px;
     }
 }

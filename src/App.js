@@ -1,20 +1,26 @@
 import Layout from './HOC/Layout/Layout';
-import {Route,Routes, BrowserRouter as Router,Navigate} from 'react-router-dom';
+import {Route,Switch,Redirect, useLocation} from 'react-router-dom';
+import {AnimatePresence} from 'framer-motion';
 
 import Home from './containers/Home/Home';
 import Work from './containers/Work/Work';
 
+
 function App() {
+
+  let location = useLocation();
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route exact path="/work" element={ <Work />}/>
-          <Route exact path="/about" element={ <Home />}/>
-          <Route path="*" element={<Navigate to="/about" />}/>
-        </Routes>
-      </Layout>
-    </Router>
+    <Layout>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/work"><Work /></Route>
+          <Route exact path="/about" ><Home /></Route>
+          <Route path="*" >
+            <Redirect to="/about" />
+          </Route>
+        </Switch>
+      </AnimatePresence>
+    </Layout>
   );
 }
 

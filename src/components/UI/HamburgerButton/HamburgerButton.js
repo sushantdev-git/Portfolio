@@ -1,9 +1,9 @@
 import React from "react";
-import './HamburgerButton.css';
+import classes from './HamburgerButton.css';
 
-export const Button = () => {
+export const Button = (props) => {
     return(
-        <div className="Button">
+        <div className={classes.Button} onClick={() => props.clicked()}>
             <div></div>
             <div></div>
             <div></div>

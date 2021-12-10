@@ -1,18 +1,14 @@
 .Footer{
     height: 50px;
-    width: 80%;
+    width: 100%;
     color: white;
-    position: sticky;
-    bottom: 0;
-    right: 0;
 }
 
-.Footer ul{
-    width: 40%;
+.Link{
     display: flex;
-    justify-content: space-between;
-}
-
-.Footer ul li{
-    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    bottom: 10%;
+    left: 5%;
+    color: white;
 }

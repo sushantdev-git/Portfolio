@@ -1,35 +1,130 @@
 .DisplayCard{
     width: 100%;
-    margin: 10px 0px;
+    margin: 20px 0px;
     background-color:#2a2e35;
     border-radius: 10px;
     box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transition: padding box-shadow 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.info{
+.DisplayCard:hover{
+    padding-top: -5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+.Info{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-height: 450px;
+    box-sizing: border-box;
 }
 
-.info .Text{
+.Text{
     padding: 30px;
+    width: 60%;
+    max-height: 550px;
+    z-index: 10;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
-.info .Image{
-    
+.Text > button{
+    border: 1px solid cadetblue;
+    background-color: rgba(95, 158, 160, 0.13);
+    outline: none;
+    color: rgb(74, 131, 133);
+    font-size: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    margin: 8px 0px;
 }
+
+
+
+
+
+.Text h1{
+    font-size: 60px;
+    line-height: 70px;
+}
+.Text h2{
+    font-size: 50px;
+    line-height: 40px;
+}
+.Text h3{
+    font-size: 25px;
+    line-height: 30px;
+}
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #A8B2D1;
+}
+
+.Tech{
+    margin:20px;
+    font-family: sans-serif;
+    color: #A8B2D1;
+    font-size: 17px;
+}
+
+.Description{
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+
+
+.Link{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
+
+.Image{
+    width: 40%;
+}
+
+.Image img{
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+
+
 
 @media (max-width:860px) {
-    .info{
+    .Info{
         flex-direction: column;
+        max-height: none;
+        overflow: none;
     }
     .Text{
+        margin-top: 90px;
         width: 100%;
+        max-height: none;
+        overflow-wrap: break-word;
+        overflow: hidden;
+        padding: 20px;
+        background-color:#2a2e35;
     }
     .Image{
-        width: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* opacity: 0.06; */
     }
     .Text h1{
         font-size: 60px;
@@ -41,7 +136,9 @@
         font-size: 20px;
     }
     p{
-        font-size: 16px;
+        font-size: 15px;
+        font-family: sans-serif;
+        color: #A8B2D1;
     }
 
 }

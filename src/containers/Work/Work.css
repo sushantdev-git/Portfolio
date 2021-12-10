@@ -5,14 +5,22 @@
     background-color:#23272D;
     color: white;
     overflow-x: wrap;
+    box-sizing: border-box;
 }
 
 .Work h1{
     font-size: 50px;
+    line-height: 50px;
 }
 
+@media (max-width:780px) {
+    .Work{
+        margin-top: 70px;
+        width: 90%;
+    }  
+ }
 @media (max-width:450px) {
     .Work{
-        width: 90%;
+        width: 95%;
     }
 }

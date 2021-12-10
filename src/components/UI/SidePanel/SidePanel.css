@@ -1,0 +1,55 @@
+.SidePanel{
+    width: 100%;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    height: 80vh;
+    transition: all 0.3s;
+    background-color:#2a2e35;
+    color: white;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SidePanel ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -40px;
+    width: 100%;
+}
+
+.SidePanel ul div{
+    background-color: transparent;
+}
+.SidePanel ul div:hover{
+    background-color:#353941;
+}
+.SidePanel li{
+    list-style: none;
+    text-align: center;
+}
+
+.SidePanel h1{
+    font-size: 60px;
+    margin: 20px 0px;
+}
+.Show{
+    bottom: 0%;
+}
+
+@media (min-width:780px) {
+    .SidePanel{
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .SidePanel h1{
+        font-size: 60px;
+        margin: 20px 0px;
+        line-height: 70px;
+    }
+}

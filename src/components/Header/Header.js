@@ -1,19 +1,25 @@
 import React from "react";
-import './Header.css'
+import classes from './Header.css'
 import {Button} from '../UI/HamburgerButton/HamburgerButton';
-import { useNavigate } from "react-router";
+import { useHistory } from "react-router";
 
-const Header = () => {
-    let navigate = useNavigate();
+const Header = (props) => {
+    let navigate = useHistory();
     return (
-        <div className="Header">
-            <div className="Header-content">
+        <div className={classes.Header}>
+            <div className={classes.HeaderContent}>
                 <ul>
-                    <li onClick={() => navigate("./about", { replace: true })}>About</li>
-                    <li onClick={() => navigate("./work", { replace: true })}>Work</li>
-                    <li onClick={() => navigate("./work", { replace: true })}>Contact</li>
+                    <li onClick={() => navigate.push({
+                            pathname: '/about',
+                        })}>About</li>
+                    <li onClick={() => navigate.push({ 
+                            pathname:'/work',
+                        })}>Work</li>
+                    <li onClick={() => navigate.push({ 
+                            pathname:'./work'
+                        })}>Contact</li>
                 </ul>
-                <Button />
+                <Button clicked={props.toggleSidePanel}/>
             </div>
         </div>
     )
