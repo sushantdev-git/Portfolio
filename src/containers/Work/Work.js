@@ -62,9 +62,9 @@ class Work extends Component {
         return(
             <div className={classes.Work}>
                 <motion.div
-                initial={{opacity:0, transform:'translateY(100%)',}}
+                initial={{opacity:0, transform:'translateY(100%)'}}
                 animate={{opacity:1,transform:'translateY(0%)'}}
-                exit={{opacity:0,transform:'translateY(100%)'}}
+                exit={{opacity:0}}
                 transition={{duration:0.5}}
                 >
                     <h1>Some of my works</h1>

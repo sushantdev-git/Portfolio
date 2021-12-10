@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     background-color:#23272D;
     overflow-y: auto;
     overflow-x: hidden;

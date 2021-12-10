@@ -63,6 +63,7 @@ p{
     }
     .Image{
         width: 90%;
+        margin: auto;
     }
     .Text h1{
         font-size: 60px;
