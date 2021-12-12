@@ -1,19 +1,22 @@
 import React from "react";
 import classes from './DisplayCard.css'
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { SvgIcon } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import {connect} from 'react-redux';
+import { motion } from "framer-motion";
 
 const DisplayCard = (props) => {
     
     let [showDetail, setShowDetail] = useState(false);
 
     let content = useRef(null);
+    let mainBox = useRef(null);
 
     let [DetailHeight, setDetailHeight] = useState('0px');
+
 
     const showDetailClicked = () => {
         setShowDetail(!showDetail);
@@ -48,13 +51,29 @@ const DisplayCard = (props) => {
         </div>
     );
 
+    useEffect(() => {
+        if(mainBox.current.clientWidth >= 600 ){
+            setShowDetail(true);
+            setDetailHeight(!showDetail ? `${content.current.scrollHeight}px` :'0px' );
+        } 
+    }, [mainBox])
+
+    console.log(mainBox)
+
     return(
-        <div className={classes.DisplayCard}>
-            <div className={classes.Info}>
-                {props.ind % 2 === 0 ? text :image}
-                {props.ind % 2 === 0 ? image:text}
+        <motion.div
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:1.5}}
+        >
+            <div className={classes.DisplayCard} ref={mainBox}>
+                <div className={classes.Info}>
+                    {props.ind % 2 === 0 ? text :image}
+                    {props.ind % 2 === 0 ? image:text}
+                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
