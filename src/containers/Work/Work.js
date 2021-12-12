@@ -8,12 +8,18 @@ class Work extends Component {
     state = {
         projects: [
             {
-                title:'Tooler',
+                title:'Ttooler',
                 subDes:'This is a Time management app. | By Me',
                 des:'Things you can do - You can add/delete todo, reminder, timetable.You also get notification according to reminder and timetable. You can also see how much time you are spending where according to your timetable.',
-                thumb:"https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=347&q=80",
+                thumb:'images/Ttooler/1.jpg',
                 tech:[
                     'Flutter', 'Sqlite',
+                ],
+                images:[
+                    'images/Ttooler/1.jpg',
+                    'images/Ttooler/2.jpg',
+                    'images/Ttooler/3.jpg',
+                    'images/Ttooler/4.jpg',
                 ]
             },
             {
@@ -28,7 +34,7 @@ class Work extends Component {
             {
                 title:'Chatoo',
                 subDes:'A chat application. | By Me',
-                des:'You can chat in real time.',
+                des:'You can chat in real time.You can also logout and login and switch account.',
                 thumb:"https://images.unsplash.com/photo-1601541984851-6779505c272c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                 tech:[
                     'Flutter', 'Firebase',

@@ -9,6 +9,12 @@
     margin-top: 20px;
 }
 
+.Footer a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: white;
+}
+
 .Link{
     display: flex;
     flex-direction: row;

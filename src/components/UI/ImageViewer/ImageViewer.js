@@ -8,7 +8,6 @@ import {connect} from 'react-redux';
 
 import Spinner from '../Spinner/Spinner';
 
-
 class ImageViewer extends Component {
 
     state = {
