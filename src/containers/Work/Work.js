@@ -69,8 +69,8 @@ class Work extends Component {
                 >
                     <h1>Some of my works</h1>
                     {displayCards}
-                    <Footer />
                 </motion.div>
+                <Footer />
             </div>
         )
     }

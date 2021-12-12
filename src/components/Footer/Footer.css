@@ -1,9 +1,12 @@
 .Footer{
-    height: 50px;
+    height: auto;
     width: 100%;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .Link{
@@ -13,4 +16,16 @@
     bottom: 10%;
     left: 5%;
     color: white;
+}
+
+.Creator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Creator p{
+    font-size: 13px;
+    font-family: monospace;
 }

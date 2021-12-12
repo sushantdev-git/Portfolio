@@ -12,10 +12,10 @@ const Header = (props) => {
                     <li onClick={() => navigate.replace({
                             pathname: '/about',
                         })}>About</li>
-                    <li onClick={() => navigate.replace({ 
+                    <li onClick={() => navigate.push({ 
                             pathname:'/work',
                         })}>Work</li>
-                    <li onClick={() => navigate.replace({ 
+                    <li onClick={() => navigate.push({ 
                             pathname:'./work',
                         })}>Contact</li>
                 </ul>

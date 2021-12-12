@@ -24,7 +24,7 @@ export const SidePanel = (props) => {
                         <div><h1>About</h1></div>
                     </li>
                     <li onClick={() => {
-                        navigate.replace({ 
+                        navigate.push({ 
                             pathname:'/work'
                         });
                         props.toggleSidePanel(false);
@@ -32,7 +32,7 @@ export const SidePanel = (props) => {
                         <div><h1>Work</h1></div>
                     </li>
                     <li onClick={() => {
-                        navigate.replace({ 
+                        navigate.push({ 
                             pathname:'/work'
                         });
                         props.toggleSidePanel(false);

@@ -11,6 +11,10 @@ export const Footer = () => {
                 <SvgIcon onClick={() => console.log()} fontSize="large"><GitHubIcon/></SvgIcon>
                 <SvgIcon fontSize="large" style={{'marginLeft':'10px'}}><LinkedInIcon/></SvgIcon>
             </div>
+            <div className={classes.Creator}>
+                <p>Designed and developed by</p>
+                <p>Sushant Mishra</p>
+            </div>
         </div>
     )
 }

@@ -37,7 +37,6 @@
 
 .Text > button{
     border: 1px solid cadetblue;
-    background-color: rgba(95, 158, 160, 0.13);
     outline: none;
     color: rgb(74, 131, 133);
     font-size: 15px;
@@ -46,29 +45,28 @@
     padding: 10px;
     cursor: pointer;
     margin: 8px 0px;
+    background-color: transparent;
 }
 
-
-
-
-
-.Text h1{
-    font-size: 60px;
-    line-height: 70px;
+.Text > button:hover{
+    background-color: rgba(95, 158, 160, 0.13);
 }
-.Text h2{
-    font-size: 50px;
-    line-height: 40px;
+
+h1{
+    font-size: 45px;
 }
-.Text h3{
-    font-size: 25px;
-    line-height: 30px;
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 18px;
 }
 p{
-    font-size: 20px;
+    font-size: 17px;
     font-family: sans-serif;
     color: #A8B2D1;
 }
+
 
 .Tech{
     margin:20px;
@@ -126,19 +124,19 @@ p{
         height: 100%;
         /* opacity: 0.06; */
     }
-    .Text h1{
-        font-size: 60px;
+    h1{
+        font-size: 40px;
+        line-height: 45px;
     }
-    .Text h2{
+    h2{
         font-size: 30px;
+        line-height: 30px;
     }
-    .Text h3{
-        font-size: 20px;
+    h3{
+        font-size: 16px;
+        line-height: 21px;
     }
     p{
         font-size: 15px;
-        font-family: sans-serif;
-        color: #A8B2D1;
     }
-
 }

@@ -19,9 +19,19 @@ html, body, #root{
   overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  font-size: 45px;
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 20px;
+}
+p{
+  font-size: 17px;
+  font-family: sans-serif;
+  color: #A8B2D1;
 }
 
 
@@ -35,4 +45,25 @@ code {
 ::selection {
   color: cadetblue;
   background: rgba(255, 255, 255, 0.178);
+}
+
+
+@media (max-width:860px) {
+  h1{
+    font-size: 60px;
+  }
+  h2{
+      font-size: 30px;
+  }
+  h3{
+      font-size: 20px;
+  }
+  p{
+      font-size: 15px;
+  }
+}
+@media (max-width:500px) {
+  ::-webkit-scrollbar{
+    width: 3px;
+  }
 }
