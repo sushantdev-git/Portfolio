@@ -29,7 +29,7 @@ class Work extends Component {
                 thumb:"https://raw.githubusercontent.com/sushantdeveloper/shopper/master/image/3.jpg",
                 tech:[
                     'ReactJs', 'Django',
-                ]
+                ],
             },
             {
                 title:'Chatoo',
@@ -43,7 +43,8 @@ class Work extends Component {
                     "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/3.jpg",
                     "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/2.jpg",
                     "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/4.jpg",
-                ]
+                ],
+                github:"https://github.com/sushantdeveloper/chatoo",
             },
             {
                 title:'Trade-n-Build',
@@ -52,7 +53,9 @@ class Work extends Component {
                 thumb:"https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
                 tech:[
                     'HTML', 'CSS', 'JQuery',
-                ]
+                ],
+                github:"https://github.com/sushantdeveloper/Trande-n-Build",
+                link:"https://sushantdeveloper.github.io/Trande-n-Build/",
             },
         ]
     }

@@ -39,8 +39,8 @@ const DisplayCard = (props) => {
             </ul>
         </div>
         <div className={classes.Link}>
-            <SvgIcon onClick={() => console.log()} fontSize="medium" style={{'marginRight':'15px'}}><GitHubIcon/></SvgIcon>
-            <SvgIcon onClick={() => console.log()} fontSize="medium"><OpenInNewIcon/></SvgIcon>
+            {props.github ? <a href={props.github}><SvgIcon onClick={() => console.log()} fontSize="medium" style={{'marginRight':'15px'}}><GitHubIcon/></SvgIcon></a> : null}
+            {props.link ? <a href={props.link}><SvgIcon onClick={() => console.log()} fontSize="medium"><OpenInNewIcon/></SvgIcon></a>:null}
         </div>
         <button onClick={() => props.showImg(props.images)}>See More Images ➡️</button>
     </div>);
