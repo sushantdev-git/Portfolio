@@ -12,7 +12,7 @@ const PdfViewer = (props) => {
         <>
             <Backdrop show={props.show} clicked = {props.close}/>
             <div className={classs.join(" ")}>
-                {props.pdf ? <iframe src={props.pdf} type="applicatoins/pdf" width="100%" height="500px"></iframe> : <p>No Content available</p>}
+                {props.pdf ? <iframe src={props.pdf} type="applicatoins/pdf" height="80%"></iframe> : <p>No Content available</p>}
             </div>
         </>
     );
