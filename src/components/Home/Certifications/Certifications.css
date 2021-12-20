@@ -11,7 +11,7 @@
 }
 
 .Certificate div{
-    height: 40px;
+    /* height: 40px; */
     padding: 10px;
     border: 1px solid cadetblue;
     display: flex;
