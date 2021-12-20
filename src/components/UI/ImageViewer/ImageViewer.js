@@ -5,7 +5,6 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { SvgIcon } from '@mui/material';
 import {connect} from 'react-redux';
-
 import Spinner from '../Spinner/Spinner';
 
 class ImageViewer extends Component {
@@ -78,15 +77,15 @@ class ImageViewer extends Component {
 
 const mapStateToprops = state => {
     return{
-        show: state.imgViewer.visible,
-        images: state.imgViewer.images,
+        show: state.viewer.imgVisible,
+        images: state.viewer.images,
     }
 }
 
 const mapDispatchToprops = dispatch => {
     return {
         close: () => dispatch({
-            type:'HIDDEN',
+            type:'IMG_HIDDEN',
             images:[],
         })
     }

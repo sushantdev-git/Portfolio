@@ -80,7 +80,7 @@ const DisplayCard = (props) => {
 const mapDispatchToProps = dispatch => {
     return {
         showImg: (images) => dispatch({
-            type:'VISIBLE',
+            type:'IMG_VISIBLE',
             images:images ? images : [],
         })
     }

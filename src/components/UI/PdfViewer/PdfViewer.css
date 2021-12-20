@@ -1,0 +1,18 @@
+.PdfViewer{
+    width: 100%;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    height: 80vh;
+    transition: all 0.3s;
+    background-color:#2a2e35;
+    color: white;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Show{
+    bottom: 0%;
+}
