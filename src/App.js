@@ -4,6 +4,7 @@ import {AnimatePresence} from 'framer-motion';
 
 import Home from './containers/Home/Home';
 import Work from './containers/Work/Work';
+import Contact from './containers/Contact/Contact';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Switch location={location} key={location.pathname}>
           <Route exact path="/work"><Work /></Route>
           <Route exact path="/about" ><Home /></Route>
+          <Route exact path="/contact" ><Contact /></Route>
           <Route path="*" >
             <Redirect to="/about" />
           </Route>

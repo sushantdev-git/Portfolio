@@ -9,6 +9,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 

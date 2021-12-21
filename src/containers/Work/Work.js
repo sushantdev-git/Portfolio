@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classes from './Work.css';
 import DisplayCard from "../../components/Work/DisplayCard/DisplayCard";
-import {Footer} from '../../components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import {motion} from 'framer-motion';
 
 class Work extends Component {

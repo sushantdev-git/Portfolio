@@ -13,6 +13,7 @@ const Certifications = (props) => {
     return(
         <div className={classes.Certifications}>
             <h1>Certifications</h1>
+            <p><i>Click to view certifications</i></p>
             <div className={classes.Certificate}>
                 <div onClick={() => show("Pdfs/gfgcertificate.pdf","pdf")}>Data Structures and Algorithms | GeeksforGeeks</div>
                 <div onClick={() => show("Pdfs/github.pdf","pdf")}>Git and Github | Coursera</div>

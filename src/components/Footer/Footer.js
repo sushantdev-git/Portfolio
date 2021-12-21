@@ -4,7 +4,7 @@ import { SvgIcon } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <div className={classes.Footer}>
             <div className={classes.Link}>
@@ -18,3 +18,5 @@ export const Footer = () => {
         </div>
     )
 }
+
+export default Footer;

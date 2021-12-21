@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classes from './Home.css'
 
 import { Intro } from "../../components/Home/Intro/Intro";
-import {Footer} from '../../components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import Skills from '../../components/Home/Skills/Skills';
 import Certifications  from "../../components/Home/Certifications/Certifications";
 import {motion} from 'framer-motion';

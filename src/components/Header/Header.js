@@ -16,7 +16,7 @@ const Header = (props) => {
                             pathname:'/work',
                         })}>Work</li>
                     <li onClick={() => navigate.push({ 
-                            pathname:'./work',
+                            pathname:'./contact',
                         })}>Contact</li>
                 </ul>
                 <Button clicked={props.toggleSidePanel}/>

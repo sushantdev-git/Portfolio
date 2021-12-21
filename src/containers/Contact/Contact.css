@@ -1,0 +1,33 @@
+.Contact{
+    min-height: calc(100vh - 70px);
+    width: 80%;
+    margin-top: 100px;
+    background-color:#23272D;
+    color: white;
+}
+
+.Content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.Contact  h1{
+    padding: 10px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    background-color: rgba(95, 158, 160, 0.171);
+}
+
+@media (max-width:780px) {
+    .Contact{
+        margin-top: 50px;
+    }  
+ }
+
+@media (max-width:450px) {
+    .Contact{
+        width: 95%;
+    }
+}
