@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className={classes.Footer}>
             <div className={classes.Link}>
-                <a href="https://github.com/sushantdeveloper"><SvgIcon onClick={() => console.log()} fontSize="large"><GitHubIcon/></SvgIcon></a>
+                <a href="https://github.com/sushantdev-git"><SvgIcon onClick={() => console.log()} fontSize="large"><GitHubIcon/></SvgIcon></a>
                 <a href="https://www.linkedin.com/in/sushant-mishra-3032b81b5/"><SvgIcon fontSize="large" style={{'marginLeft':'10px'}}><LinkedInIcon/></SvgIcon></a>
             </div>
             <div className={classes.Creator}>

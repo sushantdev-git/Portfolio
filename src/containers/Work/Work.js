@@ -26,7 +26,7 @@ class Work extends Component {
                 title:'Study-Booth',
                 subDes:'This is Social Media Platform. | Done in Group ',
                 des:'A social media and classroom based project made for students and working employee for share their ideasand work together. Things you can do - Create a post, like a post, comment on a post, delete a post, deletecomment, reply on comment, refresh your feed, filter your feed, follow/Unfollow a user, search a user.',
-                thumb:"https://raw.githubusercontent.com/sushantdeveloper/shopper/master/image/3.jpg",
+                thumb:"https://raw.githubusercontent.com/sushantdev-git/shopper/master/image/3.jpg",
                 tech:[
                     'ReactJs', 'Django',
                 ],
@@ -40,11 +40,11 @@ class Work extends Component {
                     'Flutter', 'Firebase',
                 ],
                 images: [
-                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/3.jpg",
-                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/2.jpg",
-                    "https://raw.githubusercontent.com/sushantdeveloper/chatoo/master/image/4.jpg",
+                    "https://raw.githubusercontent.com/sushantdev-git/chatoo/master/image/3.jpg",
+                    "https://raw.githubusercontent.com/sushantdev-git/chatoo/master/image/2.jpg",
+                    "https://raw.githubusercontent.com/sushantdev-git/chatoo/master/image/4.jpg",
                 ],
-                github:"https://github.com/sushantdeveloper/chatoo",
+                github:"https://github.com/sushantdev-git/chatoo",
             },
             {
                 title:'Trade-n-Build',
@@ -54,8 +54,8 @@ class Work extends Component {
                 tech:[
                     'HTML', 'CSS', 'JQuery',
                 ],
-                github:"https://github.com/sushantdeveloper/Trande-n-Build",
-                link:"https://sushantdeveloper.github.io/Trande-n-Build/",
+                github:"https://github.com/sushantdev-git/Trande-n-Build",
+                link:"https://sushantdev-git.github.io/Trande-n-Build/",
             },
         ]
     }
