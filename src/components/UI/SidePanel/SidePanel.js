@@ -17,6 +17,7 @@ export const SidePanel = (props) => {
                 pathname:path
             });
         }
+        console.log(history)
         props.toggleSidePanel(false);
 
     }
