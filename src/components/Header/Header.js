@@ -4,18 +4,16 @@ import {Button} from '../UI/HamburgerButton/HamburgerButton';
 import { useHistory } from "react-router";
 
 const Header = (props) => {
-    let navigate = useHistory();
+    let history = useHistory();
     return (
         <div className={classes.Header}>
             <div className={classes.HeaderContent}>
                 <ul>
-                    <li onClick={() => navigate.replace({
-                            pathname: '/about',
-                        })}>About</li>
-                    <li onClick={() => navigate.push({ 
+                    <li onClick={() => history.go(-(history.length - 2))}>About</li>
+                    <li onClick={() => history.push({ 
                             pathname:'/work',
                         })}>Work</li>
-                    <li onClick={() => navigate.push({ 
+                    <li onClick={() => history.push({ 
                             pathname:'./contact',
                         })}>Contact</li>
                 </ul>

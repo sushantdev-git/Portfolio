@@ -1,11 +1,11 @@
 .Work{
-    min-height: 100vh;
     width: 80%;
     margin-top: 100px;
     background-color:#23272D;
     color: white;
     overflow-x: wrap;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .Work >div> h1{

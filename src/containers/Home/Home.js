@@ -15,7 +15,7 @@ class Home extends Component {
                 initial={{opacity:0, transform:'translateY(100%)'}}
                 animate={{opacity:1,transform:'translateY(0%)'}}
                 exit={{opacity:0}}
-                transition={{duration:0.55}}
+                transition={{duration:0.45}}
                 >
                     <Intro />
                     <Skills />

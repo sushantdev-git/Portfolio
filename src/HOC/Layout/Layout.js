@@ -34,7 +34,7 @@ class Layout extends Component {
         return(
             <div className={classes.Layout} ref={this.state.LayoutRef}>
                 <Header toggleSidePanel={() => this.setSidePanel(!this.state.isSidePanelVisible)}/>
-                {this.props.children}
+                <div className={classes.MyChild}>{this.props.children}</div>
                 <SidePanel toggleSidePanel={this.setSidePanel} show={this.state.isSidePanelVisible}/>
                 <ImageViewer/>
                 <PdfViewer />

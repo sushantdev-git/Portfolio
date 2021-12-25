@@ -17,11 +17,6 @@ export const SidePanel = (props) => {
                 pathname:path
             });
         }
-        if(type === 'replace') {
-            history.replace({ 
-                pathname:path
-            });
-        }
         props.toggleSidePanel(false);
 
     }
@@ -30,7 +25,10 @@ export const SidePanel = (props) => {
             <Backdrop show={props.show} clicked={props.toggleSidePanel}/>
             <div className={classs.join(" ")}>
                 <ul>
-                    <li onClick={() => navigate('/about', 'replace')}>
+                    <li onClick={() => {
+                        history.go(-(history.length - 2));
+                        props.toggleSidePanel(false);
+                    }}>
                         <div><h1>About</h1></div>
                     </li>
                     <li onClick={() => navigate('/work', 'push')}>
