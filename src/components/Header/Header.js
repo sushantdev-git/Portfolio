@@ -1,7 +1,9 @@
 import React from "react";
 import classes from './Header.css'
 import {Button} from '../UI/HamburgerButton/HamburgerButton';
-import { useHistory } from "react-router";
+import { useHistory} from "react-router";
+
+import {navigate} from '../../router_fxn';
 
 const Header = (props) => {
     let history = useHistory();
@@ -9,13 +11,9 @@ const Header = (props) => {
         <div className={classes.Header}>
             <div className={classes.HeaderContent}>
                 <ul>
-                    <li onClick={() => history.go(-(history.length - 2))}>About</li>
-                    <li onClick={() => history.push({ 
-                            pathname:'/work',
-                        })}>Work</li>
-                    <li onClick={() => history.push({ 
-                            pathname:'./contact',
-                        })}>Contact</li>
+                    <li onClick={() => navigate('/about', history)}>About</li>
+                    <li onClick={() => navigate('/work', history)}>Work</li>
+                    <li onClick={() => navigate('/contact', history)}>Contact</li>
                 </ul>
                 <Button clicked={props.toggleSidePanel}/>
             </div>
