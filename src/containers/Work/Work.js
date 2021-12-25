@@ -57,7 +57,7 @@ class Work extends Component {
                 github:"https://github.com/sushantdev-git/Trande-n-Build",
                 link:"https://sushantdev-git.github.io/Trande-n-Build/",
             },
-        ]
+        ],
     }
 
     componentDidMount(){
@@ -69,7 +69,7 @@ class Work extends Component {
 
         displayCards = this.state.projects.map((project,i) => <DisplayCard ind={i} key={i} {...project}/>)
         return(
-            <div className={classes.Work}>
+            <div className={classes.Work} key="2">
                 <motion.div
                 initial={{opacity:0, transform:'translateY(100%)'}}
                 animate={{opacity:1,transform:'translateY(0%)'}}

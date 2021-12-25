@@ -9,6 +9,8 @@ class Layout extends Component {
 
     state = {
         isSidePanelVisible:false,
+        child:null,
+        LayoutRef:React.createRef(),
     }
 
     setSidePanel = (val) => {
@@ -17,11 +19,20 @@ class Layout extends Component {
         })
     }
 
+    shouldComponentUpdate(nextProps){
+
+        let oldKeys = this.props.children.props.children.key;
+        let newKeys = nextProps.children.props.children.key;
+        if(oldKeys !== newKeys) this.state.LayoutRef.current.scrollTo({top:0, smooth:true});
+        //scrolling to top if children is changed.
+        return true;
+    }
+    
 
     render(){
 
         return(
-            <div className={classes.Layout}>
+            <div className={classes.Layout} ref={this.state.LayoutRef}>
                 <Header toggleSidePanel={() => this.setSidePanel(!this.state.isSidePanelVisible)}/>
                 {this.props.children}
                 <SidePanel toggleSidePanel={this.setSidePanel} show={this.state.isSidePanelVisible}/>

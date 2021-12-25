@@ -15,6 +15,7 @@ const Skills = () => {
                 <div>MySql</div>
                 <div>Python</div>
                 <div>Flutter</div>
+                <div>Blender</div>
                 <div>Javascript</div>
             </div>
             <h3>Some skills that i'm working on</h3>
