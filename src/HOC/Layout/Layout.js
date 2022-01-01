@@ -20,7 +20,6 @@ class Layout extends Component {
     }
 
     shouldComponentUpdate(nextProps){
-
         let oldKeys = this.props.children.props.children.key;
         let newKeys = nextProps.children.props.children.key;
         if(oldKeys !== newKeys) this.state.LayoutRef.current.scrollTo({top:0, smooth:true});

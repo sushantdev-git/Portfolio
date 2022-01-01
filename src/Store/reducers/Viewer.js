@@ -1,5 +1,4 @@
-
-var initialState = {
+let initialState = {
     imgVisible: false,
     images:[],
     pdfVisible: false,
