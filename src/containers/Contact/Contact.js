@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classes from './Contact.css';
 import Footer from '../../components/Footer/Footer';
-import {motion} from 'framer-motion'
+import {connect} from 'react-redux';
+import {motion} from 'framer-motion';
 
 class Contact extends Component{
 
@@ -17,6 +18,9 @@ class Contact extends Component{
                     <div className={classes.Content}>
                         <a href='mailto:sushantkumar6700@gmail.com'><h1>Let's Connect</h1></a>
                     </div>
+                    <div className={classes.Content} style={{cursor:'pointer'}}>
+                        <h1 onClick={() => this.props.showPdf('/Pdfs/resume.pdf')}>Resume</h1>
+                    </div>
                     <Footer />
                 </motion.div>
             </div>
@@ -24,4 +28,13 @@ class Contact extends Component{
     }
 }
 
-export default Contact;
+const mapDispatchToprops = dispatch => {
+    return {
+        showPdf: (pdf) => dispatch({
+            type:"PDF_VISIBLE",
+            pdf:pdf,
+        }),
+    }
+}
+
+export default connect(null, mapDispatchToprops)(Contact);
