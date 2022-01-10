@@ -20,7 +20,7 @@ class ImageViewer extends Component {
 
         this.setState({
             index:val,
-            // imageLoading:true,
+            imageLoading:true,
         })
     }
 
@@ -68,7 +68,7 @@ class ImageViewer extends Component {
                                 ref={this.state.imgref} alt="" 
                                 style={{display:`${!this.state.imageLoading ? 'block' : 'none' }`}} 
                                 onLoad={() => this.onImageLoad(false)} 
-                                onLoadStart={() => this.onImageLoad(true)}
+                                // onLoadStart={() => this.onImageLoad(true)}
                             />
                             {this.state.imageLoading ?  <ImageLoading width="60%" height="80%"/> : null}
                         </>
