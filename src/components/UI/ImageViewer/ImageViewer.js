@@ -5,13 +5,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { SvgIcon } from '@mui/material';
 import {connect} from 'react-redux';
-import Spinner from '../Spinner/Spinner';
+import ImageLoading from '../ImageLoading/ImageLoading';
 
 class ImageViewer extends Component {
 
     state = {
         index:0,
-        imageLoading:false,
+        imageLoading:true,
+        imgref: React.createRef(null)
     }
 
     setIndex = (val) => {
@@ -19,7 +20,18 @@ class ImageViewer extends Component {
 
         this.setState({
             index:val,
+            // imageLoading:true,
         })
+    }
+
+    componentDidMount() {
+        console.log(this.state.props)
+        this.state.imgref.current.addEventListener('load',() =>  this.onImageLoad(false));
+    }
+
+    onImageLoad = (val) => { 
+        console.log("image loaded called", val)
+        this.setState({imageLoading: val})
     }
 
     render(){
@@ -54,12 +66,12 @@ class ImageViewer extends Component {
                     : null}
     
                     {this.state.index != null ? 
-                        <img src={this.props.images[this.state.index]} alt="" style={{'visibility': `${this.state.imgLoading ? 'hidden':'visible'}`}} onLoad={() => {
-                            
-                        }}/> 
+                        <>
+                            <img src={this.props.images[this.state.index]} ref={this.state.imgref} alt="" style={{display:`${!this.state.imageLoading ? 'block' : 'none' }`}}/>
+                            {this.state.imageLoading ?  <ImageLoading width="60%" height="80%"/> : null}
+                        </>
                     : <p>No image is avaible at this time</p>}
     
-                    {this.state.imgLoading ? <Spinner /> : null}
     
                     {this.state.index != null && this.state.index < this.props.images.length-1 ?
                         <button onClick={() => {
@@ -90,4 +102,5 @@ const mapDispatchToprops = dispatch => {
         })
     }
 }
+
 export default connect(mapStateToprops,mapDispatchToprops)(ImageViewer);
