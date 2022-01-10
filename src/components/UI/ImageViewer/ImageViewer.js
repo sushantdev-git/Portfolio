@@ -24,13 +24,9 @@ class ImageViewer extends Component {
         })
     }
 
-    componentDidMount() {
-        console.log(this.state.props)
-        this.state.imgref.current.addEventListener('load',() =>  this.onImageLoad(false));
-    }
 
     onImageLoad = (val) => { 
-        console.log("image loaded called", val)
+        // console.log("image loaded called", val)
         this.setState({imageLoading: val})
     }
 
@@ -67,7 +63,13 @@ class ImageViewer extends Component {
     
                     {this.state.index != null ? 
                         <>
-                            <img src={this.props.images[this.state.index]} ref={this.state.imgref} alt="" style={{display:`${!this.state.imageLoading ? 'block' : 'none' }`}}/>
+                            <img 
+                                src={this.props.images[this.state.index]} 
+                                ref={this.state.imgref} alt="" 
+                                style={{display:`${!this.state.imageLoading ? 'block' : 'none' }`}} 
+                                onLoad={() => this.onImageLoad(false)} 
+                                onLoadStart={() => this.onImageLoad(true)}
+                            />
                             {this.state.imageLoading ?  <ImageLoading width="60%" height="80%"/> : null}
                         </>
                     : <p>No image is avaible at this time</p>}
