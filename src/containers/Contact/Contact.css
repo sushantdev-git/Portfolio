@@ -26,6 +26,10 @@
     background-color: rgba(95, 158, 160, 0.171);
 }
 
+.Contact h1:hover{
+    background-color: rgba(40, 102, 104, 0.171);
+}
+
 @media (max-width:780px) {
     .Contact{
         margin-top: 50px;
