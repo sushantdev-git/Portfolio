@@ -1,0 +1,40 @@
+.Skills{
+    /* width: 100%; */
+    margin-top: 50px;
+    padding: 10px;
+    margin: auto;
+}
+
+.Skills h3{
+    line-height: 60px;
+    font-weight: 350;
+}
+.SkillsContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.LearningSkillsContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.SkillsContent div, .LearningSkillsContent div{
+    height: 40px;
+    padding: 10px;
+    border: 1px solid cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px 10px 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Source Code Pro';
+}
+
+.SkillsContent div:hover, .LearningSkillsContent div:hover{
+    background-color: rgba(95, 158, 160, 0.185);
+    cursor: pointer;
+}

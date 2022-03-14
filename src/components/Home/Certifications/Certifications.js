@@ -15,9 +15,9 @@ const Certifications = (props) => {
             <h1>Certifications</h1>
             <p><i>Click to view certifications</i></p>
             <div className={classes.Certificate}>
-                <div onClick={() => show("Pdfs/gfgcertificate.pdf","pdf")}>Data Structures and Algorithms | GeeksforGeeks</div>
-                <div onClick={() => show("Pdfs/github.pdf","pdf")}>Git and Github | Coursera</div>
                 <div onClick={() => show("images/Introduction to Algorithms and Analysis.jpg","img")}>Algorithms | NPTEL</div>
+                <div onClick={() => show("Pdfs/github.pdf","pdf")}>Git and Github | Coursera</div>
+                <div onClick={() => show("Pdfs/gfgcertificate.pdf","pdf")}>Data Structures and Algorithms | GeeksforGeeks</div>
             </div>
         </div>
     );

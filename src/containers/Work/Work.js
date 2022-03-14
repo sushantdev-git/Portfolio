@@ -15,6 +15,7 @@ class Work extends Component {
                 tech:[
                     'Flutter', 'Sqlite',
                 ],
+                github:"https://github.com/sushantdev-git/Ttooler",
                 images:[
                     'images/Ttooler/1.jpg',
                     'images/Ttooler/2.jpg',
@@ -30,7 +31,7 @@ class Work extends Component {
                 tech:[
                     'ReactJs', 'Django',
                 ],
-                link:'https://study-booth-ewrmqapz5-studybooth.vercel.app/',
+                link:'https://study-booth.vercel.app',
                 images:[
                     'images/StudyBooth/1.png',
                     'images/StudyBooth/2.png',
