@@ -1,98 +1,135 @@
-.Intro{
+.Intro {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.Text {
+  width: 50%;
+  padding-right: 20px;
+}
+.Text h1 {
+  font-size: 70px;
+  line-height: 80px;
+  transition: 0.3s;
+}
+.Text h2 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.Text h3 {
+  font-size: 25px;
+  line-height: 0px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.Text h1:hover {
+  color: cadetblue;
+}
+
+.Text p {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: lighter;
+  /* font-style: italic; */
+}
+
+.ImageContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.Image {
+  position: relative;
+}
+
+.Image img {
+  max-width: 100%;
+  border: 2px solid white;
+}
+
+.ImageBoundary {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 25px;
+  left: 30px;
+  border: 2px solid white;
+  z-index: -10;
+  transition: all 0.3s;
+}
+
+.Image:hover .ImageBoundary {
+  top: 15px;
+  left: 20px;
+}
+
+.space40 {
+  height: 40px;
+}
+.space20 {
+  height: 20px;
+}
+
+@media (max-width: 860px) {
+  .Intro {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .Text {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-
-.Text{
-    width: 50%;
-    padding-right: 20px;
-}
-.Text h1{
-    font-size: 70px;
-    line-height: 80px;
-    transition: 0.3s;
-}
-.Text h2{
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-}
-.Text h3{
-    font-size: 25px;
-    line-height: 0px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-
-
-
-.Text h1:hover{
-    color: cadetblue;
-}
-
-p{  
-    font-family: sans-serif;
-    margin:10px 0px;
+    padding-right: 0px;
+  }
+  .ImageContainer {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  .Text h1 {
+    font-size: 60px;
+  }
+  .Text h2 {
+    font-size: 30px;
+  }
+  .Text h3 {
     font-size: 20px;
-    font-weight: lighter;
+  }
+  .Text p {
+    font-size: 16px;
+  }
+  .ImageBoundary {
+    top: 20px;
+    left: 25px;
+  }
 }
 
-.Image{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-.Image img{
-    max-width: 100%;
-    border: 2px solid white;
-}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 50px;
+    line-height: 10px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 15px;
+  }
 
-@media (max-width:860px) {
-    .Intro{
-        margin-top: 10px;
-        flex-direction: column;
-    }
-    .Text{
-        width: 100%;
-        padding-right: 0px;
-    }
-    .Image{
-        width: 90%;
-        margin: auto;
-    }
-    .Text h1{
-        font-size: 60px;
-    }
-    .Text h2{
-        font-size: 30px;
-    }
-    .Text h3{
-        font-size: 20px;
-    }
-    p{
-        font-size: 16px;
-    }
-
-}
-
-@media (max-width:450px) {
-    h1{
-        font-size: 50px;
-        line-height: 10px;
-    }
-    h2{
-        font-size: 25px;
-    }
-    h3{
-        font-size: 16px;
-    }
-    p{  
-        font-size: 15px;
-    }
+  .space40 {
+    height: 20px;
+  }
+  .space20 {
+    height: 10px;
+  }
 }
