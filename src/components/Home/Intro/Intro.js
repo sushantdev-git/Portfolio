@@ -31,13 +31,13 @@ export const Intro = () => {
         <h2>I'm an aspiring Software Engineer 🤳</h2>
         <div className={classes.space40}></div>
         <p>
-          From my childhood I was always intrested in how things works, what is
-          the mechanism behind it. From there I fall in love with exploring and
-          creating new things. After sometime, I was introduced to programming
-          and it give me the opportunity to bring my ideas to life. After that I
-          learned many programming languages and technologies to build new
-          things. <i>Currently I'm working on MERN stack</i> and hoping to learn
-          more to get constant dopamine hits 🚀🚀
+          From my childhood I was always interested in how things works, what is
+          the mechanism behind it. From there, I fall in love with exploring and
+          creating new things. After sometime, I was introduced to programming,
+          and it gives me the opportunity to bring my ideas to life. After that,
+          I learned many programming languages and technologies to build new
+          things. <i>Currently, I'm working on MERN stack</i> and hoping to
+          learn more to get constant dopamine hits 🚀🚀
         </p>
       </div>
       <div className={classes.ImageContainer}>
