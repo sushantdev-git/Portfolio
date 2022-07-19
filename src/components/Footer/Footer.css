@@ -1,37 +1,40 @@
-.Footer{
-    height: auto;
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+.Footer {
+  height: auto;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 40px;
 }
 
-.Footer a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-    color: white;
+.Footer a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: white;
 }
 
-.Link{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    bottom: 10%;
-    left: 5%;
-    color: white;
+.Link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 10%;
+  left: 5%;
+  color: white;
 }
 
-.Creator{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.Creator p{
-    font-size: 13px;
-    font-family: monospace;
+.Creator p {
+  font-size: 13px;
+  font-family: monospace;
 }
