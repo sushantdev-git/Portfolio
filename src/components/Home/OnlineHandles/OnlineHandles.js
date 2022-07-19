@@ -5,7 +5,7 @@ const OnlineHandle = () => {
   return (
     <div className={classes.Skills}>
       <h1>Online Profiles</h1>
-      <p>
+      <p style={{ lineHeight: "50px" }}>
         <i>Click to visit profiles</i>
       </p>
       <div className={classes.SkillsContent}>

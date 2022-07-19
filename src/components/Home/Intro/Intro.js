@@ -25,7 +25,7 @@ export const Intro = () => {
       <div className={classes.Text}>
         <h3>Hi there 👋, I'm</h3>
         <div style={{ height: "100px" }}>
-          <h1>{displaytext} 👨‍💻</h1>
+          <h1>{displaytext}👨‍💻</h1>
         </div>
         <div className={classes.space20}></div>
         <h2>I'm an aspiring Software Engineer 🤳</h2>

@@ -11,7 +11,7 @@ const Certifications = (props) => {
   return (
     <div className={classes.Certifications}>
       <h1>Certifications</h1>
-      <p>
+      <p style={{ lineHeight: "50px" }}>
         <i>Click to view certificates</i>
       </p>
       <div className={classes.Certificate}>
