@@ -8,7 +8,7 @@ const Skills = () => {
       <h3>Languages</h3>
       <div className={classes.SkillsContent}>
         <div>
-          C++ <img src="icons/c++.png" alt="none" />
+          C++ <img src="icons/cp.png" alt="none" />
         </div>
         <div>
           Dart <img src="icons/dart.png" alt="none" />
@@ -73,9 +73,15 @@ const Skills = () => {
       </div>
       <h3>Some skills that i'm working on</h3>
       <div className={classes.SkillsContent}>
-        <div>Algorithms</div>
-        <div>Data Structures</div>
-        <div>Machine Learning</div>
+        <div>
+          Algorithms <img src="icons/algo.png" alt="none" />
+        </div>
+        <div>
+          Data Structures <img src="icons/datastructure.png" alt="none" />
+        </div>
+        <div>
+          Machine Learning <img src="icons/ml.png" alt="none" />
+        </div>
       </div>
     </div>
   );
