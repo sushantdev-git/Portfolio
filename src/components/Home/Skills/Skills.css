@@ -28,6 +28,11 @@
   font-family: "Source Code Pro";
 }
 
+.SkillsContent div img {
+  height: 25px;
+  margin-left: 5px;
+}
+
 .SkillsContent div:hover {
   background-color: rgba(95, 158, 160, 0.185);
 }

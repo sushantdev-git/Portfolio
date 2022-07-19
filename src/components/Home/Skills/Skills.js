@@ -7,33 +7,69 @@ const Skills = () => {
       <h1>Skills</h1>
       <h3>Languages</h3>
       <div className={classes.SkillsContent}>
-        <div>C++</div>
-        <div>Dart</div>
-        <div>Java</div>
-        <div>Python</div>
-        <div>Typescript</div>
-        <div>Javascript (ES6+)</div>
+        <div>
+          C++ <img src="icons/c++.png" alt="none" />
+        </div>
+        <div>
+          Dart <img src="icons/dart.png" alt="none" />
+        </div>
+        <div>
+          Java <img src="icons/java.png" alt="none" />
+        </div>
+        <div>
+          Python <img src="icons/python.png" alt="none" />
+        </div>
+        <div>
+          Typescript <img src="icons/typescript.png" alt="none" />
+        </div>
+        <div>
+          Javascript (ES6+) <img src="icons/javascript.png" alt="none" />
+        </div>
       </div>
       <h3>Technologies</h3>
       <div className={classes.SkillsContent}>
-        <div>Node.js</div>
-        <div>Next.js</div>
-        <div>React.js</div>
-        <div>Flutter</div>
-        <div>Firebase</div>
+        <div>
+          Node.js <img src="icons/nodejs.png" alt="none" />
+        </div>
+        <div>
+          Next.js <img src="icons/reactjs.png" alt="none" />
+        </div>
+        <div>
+          React.js <img src="icons/reactjs.png" alt="none" />
+        </div>
+        <div>
+          Flutter <img src="icons/flutter.png" alt="none" />
+        </div>
+        <div>
+          Firebase <img src="icons/firebase.png" alt="none" />
+        </div>
       </div>
       <h3>Databases</h3>
       <div className={classes.SkillsContent}>
-        <div>Oracle</div>
-        <div>MongoDB</div>
+        <div>
+          Oracle <img src="icons/oracle.png" alt="none" />
+        </div>
+        <div>
+          MongoDB <img src="icons/mongodb.png" alt="none" />
+        </div>
       </div>
       <h3>Others</h3>
       <div className={classes.SkillsContent}>
-        <div>CSS</div>
-        <div>Git</div>
-        <div>HTML</div>
-        <div>GitHub</div>
-        <div>Vercel</div>
+        <div>
+          CSS <img src="icons/css.png" alt="none" />
+        </div>
+        <div>
+          Git <img src="icons/git.png" alt="none" />
+        </div>
+        <div>
+          HTML <img src="icons/html.png" alt="none" />
+        </div>
+        <div>
+          GitHub <img src="icons/github.png" alt="none" />
+        </div>
+        <div>
+          Vercel <img src="icons/vercel.png" alt="none" />
+        </div>
       </div>
       <h3>Some skills that i'm working on</h3>
       <div className={classes.SkillsContent}>
