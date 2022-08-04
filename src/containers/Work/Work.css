@@ -21,13 +21,16 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 1130px) {
+  .displayCards {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 780px) {
   .Work {
     margin-top: 70px;
     width: 90%;
-  }
-  .displayCards {
-    justify-content: space-around;
   }
 }
 @media (max-width: 450px) {

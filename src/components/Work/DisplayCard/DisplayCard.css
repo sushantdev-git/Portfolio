@@ -122,10 +122,13 @@ p {
   .Info {
     flex-direction: column;
     max-height: none;
-    overflow: none;
+    overflow-y: scroll;
+  }
+  .DisplayCard {
+    overflow-y: scroll;
   }
   .Text {
-    margin-top: 90px;
+    margin-top: 10px;
     width: 100%;
     max-height: none;
     overflow-wrap: break-word;
