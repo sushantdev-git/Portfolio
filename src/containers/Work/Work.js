@@ -50,7 +50,7 @@ class Work extends Component {
         github: "https://github.com/sushantdev-git/chatoo",
       },
       {
-        title: "Trade-n-Build",
+        title: "Trade-&-Build",
         subDes: "A platform to trade | Done in Group",
         des: "You can see stock price of different companies, compare them and buy them.",
         thumb: "images/TradenBuild/1.png",
@@ -76,8 +76,8 @@ class Work extends Component {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.55 }}
         >
-          <h1>Some of my works</h1>
-          {displayCards}
+          <h1>Some of my Projects</h1>
+          <div className={classes.displayCards}>{displayCards}</div>
         </motion.div>
         <Footer />
       </div>
