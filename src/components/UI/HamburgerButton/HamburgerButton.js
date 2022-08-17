@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './HamburgerButton.css';
+import classes from './HamburgerButton.module.css';
 
 export const Button = (props) => {
     return(

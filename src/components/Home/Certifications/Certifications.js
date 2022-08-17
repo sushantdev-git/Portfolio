@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Certifications.css";
+import classes from "./Certifications.module.css";
 import { connect } from "react-redux";
 
 const Certifications = (props) => {

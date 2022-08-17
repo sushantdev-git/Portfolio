@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./DisplayCard.css";
+import classes from "./DisplayCard.module.css";
 import { useState, useRef, useEffect } from "react";
 
 import { SvgIcon } from "@mui/material";

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ImageLoading.css';
+import styles from './ImageLoading.module.css';
 
 const ImageLoading = (props) => {
     return (

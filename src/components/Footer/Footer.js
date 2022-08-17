@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './Footer.css';
+import classes from './Footer.module.css';
 import { SvgIcon } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';

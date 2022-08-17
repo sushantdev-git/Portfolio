@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import classes from "./Intro.css";
+import classes from "./Intro.module.css";
 
 export const Intro = () => {
   const name = "Sushant";

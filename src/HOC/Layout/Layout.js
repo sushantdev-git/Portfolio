@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/Header/Header";
-import classes from './Layout.css';
+import classes from './Layout.module.css';
 import {SidePanel} from '../../components/UI/SidePanel/SidePanel';
 import ImageViewer from '../../components/UI/ImageViewer/ImageViewer';
 import PdfViewer from '../../components/UI/PdfViewer/PdfViewer';

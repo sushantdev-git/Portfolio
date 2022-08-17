@@ -1,12 +1,12 @@
 import React from 'react';
 import Backdrop from '../Backdrop/Backdrop';
-import classes from './SidePanel.css';
-import { useHistory, useLocation } from "react-router";
+import classes from './SidePanel.module.css';
+import { useLocation } from "react-router";
 import {navigate} from '../../../router_fxn';
 
 export const SidePanel = (props) => {
 
-    let history = useHistory();
+    let history = useLocation();
 
     let classs = [classes.SidePanel];
     if(props.show) classs.push(classes.Show);

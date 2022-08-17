@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import classes from './ImageViewer.css';
+import classes from './ImageViewer.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';

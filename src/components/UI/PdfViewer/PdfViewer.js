@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './PdfViewer.css';
+import classes from './PdfViewer.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 import {connect} from 'react-redux';
 

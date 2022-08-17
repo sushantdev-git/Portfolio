@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from './Home.css'
+import classes from './Home.module.css'
 
 import { Intro } from "../../components/Home/Intro/Intro";
 import Footer from '../../components/Footer/Footer';

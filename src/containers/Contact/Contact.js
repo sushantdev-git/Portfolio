@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Contact.css';
+import classes from './Contact.module.css';
 import Footer from '../../components/Footer/Footer';
 import {connect} from 'react-redux';
 import {motion} from 'framer-motion';

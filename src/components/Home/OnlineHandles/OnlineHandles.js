@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./OnlineHandles.css";
+import classes from "./OnlineHandles.module.css";
 
 const OnlineHandle = () => {
   return (

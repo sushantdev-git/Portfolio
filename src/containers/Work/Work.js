@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import classes from "./Work.css";
+import classes from "./Work.module.css";
 import DisplayCard from "../../components/Work/DisplayCard/DisplayCard";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
