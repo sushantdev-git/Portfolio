@@ -1,12 +1,11 @@
 import React from 'react';
 import Backdrop from '../Backdrop/Backdrop';
 import classes from './SidePanel.module.css';
-import { useLocation } from "react-router";
-import {navigate} from '../../../router_fxn';
+import { useNavigate } from 'react-router-dom';
 
 export const SidePanel = (props) => {
 
-    let history = useLocation();
+    const navigate = useNavigate();
 
     let classs = [classes.SidePanel];
     if(props.show) classs.push(classes.Show);
@@ -19,13 +18,22 @@ export const SidePanel = (props) => {
             <Backdrop show={props.show} clicked={props.toggleSidePanel}/>
             <div className={classs.join(" ")}>
                 <ul>
-                    <li onClick={() => navigate('/about', history, fxn )}>
+                    <li onClick={() => {
+                        navigate('/about')
+                        fxn();
+                    }}>
                         <div><h1>About</h1></div>
                     </li>
-                    <li onClick={() => navigate('/work', history, fxn)}>
+                    <li onClick={() => {
+                        navigate('/work')
+                        fxn();
+                    }}>
                         <div><h1>Work</h1></div>
                     </li>
-                    <li onClick={() => navigate('/contact', history, fxn)}>
+                    <li onClick={() => {
+                        navigate('/contact')
+                        fxn();
+                    }}>
                         <div><h1>Contact</h1></div>
                     </li>
                 </ul>
