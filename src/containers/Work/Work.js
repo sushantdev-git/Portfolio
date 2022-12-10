@@ -8,6 +8,15 @@ class Work extends Component {
   state = {
     projects: [
       {
+        title: "CF Daily",
+        subDes: "A Daily Challenge Website. | Done in Group ",
+        des: "This website daily picks a random problem for each rank on Codeforces from Codeforces' problem set. This helps the user learn new topics in programming and maintain consistency in problem solving.",
+        thumb: "images/Ttooler/1.jpg",
+        tech: ["ReactJs", "NodeJs", "MongoDB", "Azure"],
+        images: [],
+        link:"https://cf-daily.vercel.app/"
+      },
+      {
         title: "Ttooler",
         subDes: "This is a Time management app. | By Me",
         des: "Things you can do - You can add/delete todo, reminder, timetable.You also get notification according to reminder and timetable. You can also see how much time you are spending where according to your timetable.",
