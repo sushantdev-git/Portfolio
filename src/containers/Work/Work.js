@@ -49,7 +49,7 @@ class Work extends Component {
         subDes: "A Platform to build Resume | Done in Group",
         des: "You can create you own customized resume in few minutes",
         thumb: "",
-        tech: ["React", "Redux"],
+        tech: ["ReactJs", "Redux"],
         github: "https://github.com/sushantdev-git/Resume-Builder",
         link: "https://resume-builder-omega.vercel.app/",
         images: [],

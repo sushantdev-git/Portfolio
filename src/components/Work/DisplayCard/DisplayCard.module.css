@@ -49,6 +49,7 @@ a:active {
   box-sizing: border-box;
 }
 
+
 .Text > button {
   border: 1px solid cadetblue;
   outline: none;
@@ -89,9 +90,21 @@ p {
 
 .Tech {
   margin: 20px;
+  margin-left: 0px;
   font-family: sans-serif;
   color: #a8b2d1;
   font-size: 17px;
+}
+
+.Tech div{
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+.Tech img {
+  height: 25px;
+  margin-right: 5px;
 }
 
 .Description {

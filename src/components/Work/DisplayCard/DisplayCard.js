@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { connect } from "react-redux";
 import { motion } from "framer-motion";
+import IconAddress from "../../../IconAddress";
 
 const DisplayCard = (props) => {
   let [showDetail, setShowDetail] = useState(false);
@@ -39,11 +40,11 @@ const DisplayCard = (props) => {
       </button>
 
       <div className={classes.Tech}>
-        <ul>
-          {props.tech.map((tName, i) => (
-            <li key={i}>{tName}</li>
-          ))}
-        </ul>
+        {props.tech.map((tName, i) => (
+          <div key={i}>
+            <img src={IconAddress[tName] ?? 'icons/algo.png'} /> {tName}
+          </div>
+        ))}
       </div>
       <div className={classes.Link}>
         {props.github ? (
