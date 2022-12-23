@@ -7,7 +7,7 @@ const Experience = () => {
 
     const experience = [
         {
-            profile: "Upcoming Software Development Intern",
+            profile: "Software Development Intern",
             company: "STGI",
             duration: "Jan 2023 - Sep 2023",
             techStack: ["VueJs", "Django", "AWS"],
@@ -16,7 +16,7 @@ const Experience = () => {
             ],
         },
         {
-            profile: "Co-Founder | Software Developer Engineer ",
+            profile: "Co-Founder | Software Development Engineer ",
             company: "Shopoff",
             duration: "August 2022 - Present",
             techStack: ["Flutter", "NodeJs", "MongoDB", "AWS", "Firebase", "GCP"],
