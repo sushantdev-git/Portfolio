@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router";
 const Header = (props) => {
   let navigate = useNavigate();
   let location = useLocation();
-  console.log(location);
+
   return (
     <div className={classes.Header}>
       <div className={classes.HeaderContent}>

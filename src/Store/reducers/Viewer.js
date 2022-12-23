@@ -8,7 +8,6 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     //work of reduer is on basis of action change the state
-    console.log(action)
     switch(action.type){
         case action.type = 'IMG_VISIBLE':
             console.log('imgae viewer visible')

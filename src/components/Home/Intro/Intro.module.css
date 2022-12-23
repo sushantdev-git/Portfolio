@@ -54,8 +54,8 @@
 .Image img {
   max-width: 100%;
   border: 2px solid white;
-  min-height: 400px;
-  min-width: 400px;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .ImageBoundary {

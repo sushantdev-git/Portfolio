@@ -29,7 +29,8 @@
 }
 .SidePanel li{
     list-style: none;
-    text-align: center;
+    text-align: start;
+    padding: 0px 40px;
 }
 
 .SidePanel h1{
@@ -38,6 +39,10 @@
 }
 .Show{
     bottom: 0%;
+}
+
+.Active{
+    color: cadetblue;
 }
 
 @media (min-width:780px) {
