@@ -35,11 +35,19 @@
 
 .HeaderContent ul li{
     list-style: none;
+    display: flex;
+    align-items: center;
 }
+
 
 .HeaderContent ul li:hover{
     color: cadetblue;
     cursor: pointer;
+}
+
+.Active{
+    color: cadetblue;
+    border-bottom: 1px solid cadetblue;
 }
 
 @media (max-width:780px) {

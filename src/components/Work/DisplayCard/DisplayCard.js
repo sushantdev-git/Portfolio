@@ -85,7 +85,6 @@ const DisplayCard = (props) => {
     }
   }, [mainBox]);
 
-  console.log(mainBox);
 
   return (
     <motion.div

@@ -1,0 +1,23 @@
+.Experience {
+    width: 80%;
+    margin-top: 100px;
+    background-color: #23272d;
+    color: white;
+    overflow-x: wrap;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1440px;
+  }
+
+
+  @media (max-width: 780px) {
+    .Experience {
+      margin-top: 70px;
+      width: 90%;
+    }
+  }
+  @media (max-width: 450px) {
+    .Experience {
+      width: 95%;
+    }
+  }

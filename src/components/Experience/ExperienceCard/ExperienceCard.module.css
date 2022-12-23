@@ -1,0 +1,91 @@
+
+.ExperienceCard{
+    display: flex;
+    align-items: center;
+    /* height: max-content; */
+    font-family: "Poppins";
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    margin: 7px 0px;
+}
+
+.Company{
+    color: cadetblue;
+    margin-left: 10px;
+}
+
+.Connector{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.LineUP, .LineDOWN{
+    width: 2px;
+    border: 1px dashed cadetblue;
+    flex: 1;
+}
+
+
+.Circle{
+    height: 20px;
+    width: 20px;
+    background-color:cadetblue;
+    border-radius: 50%;
+}
+
+.Line{
+    height: 2px;
+    flex: 1;
+    background-color: cadetblue;
+}
+
+.TechStack{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Tech{
+    display: flex;
+    align-items: center;
+    /* border-right: 1px solid white;
+    margin-left: 5px; */
+    margin-right: 10px;
+}
+
+.Tech img{
+    height: 25px;
+    margin: 0px 5px;
+}
+
+.Container{
+    min-height: 200px;
+    height: auto;
+    width: 80%;
+    border: 2px solid cadetblue;
+    border-radius: 10px;
+    background-color:#2c343f;
+    margin: 20px 0px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.Container ul{
+    padding: 20px;
+}
+
+@media screen and (max-width:500px) {
+    h2{
+        font-size: 23px;
+    }
+    .Container{
+        width: 90%;
+    }
+}

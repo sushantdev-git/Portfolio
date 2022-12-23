@@ -11,7 +11,13 @@ const IconAddress = {
     'Firebase': 'icons/firebase.png',
     'HTML' : 'icons/html.png',
     'CSS' : 'icons/css.png',
-    'JQuery' : 'icons/javascript.png'
+    'JQuery' : 'icons/javascript.png',
+    "AWS" : "icons/aws.png",
+    "GCP" : "icons/gcp.png",
+    "Django" : "icons/django.png",
+    "VueJs" : "icons/vuejs.png",
+    "Azure" : "icons/azure.png",
+    "MongoDB" : "icons/mongodb.png",
 }
 
 export default IconAddress;

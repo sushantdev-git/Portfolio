@@ -25,10 +25,16 @@ export const SidePanel = (props) => {
                         <div><h1>About</h1></div>
                     </li>
                     <li onClick={() => {
-                        navigate('/work')
+                        navigate('/projects')
                         fxn();
                     }}>
-                        <div><h1>Work</h1></div>
+                        <div><h1>Projects</h1></div>
+                    </li>
+                    <li onClick={() => {
+                        navigate('/experience')
+                        fxn();
+                    }}>
+                        <div><h1>Experience</h1></div>
                     </li>
                     <li onClick={() => {
                         navigate('/contact')
