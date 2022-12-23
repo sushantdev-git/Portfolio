@@ -12,7 +12,7 @@ const Experience = () => {
             duration: "Jan 2023 - Sep 2023",
             techStack: ["VueJs", "Django", "AWS"],
             description: [
-                "Excieted to learn new stuff."
+                "Excited to learn new stuff."
             ],
         },
         {
@@ -23,7 +23,9 @@ const Experience = () => {
             description: [
                 "Developed the app in Flutter.",
                 "Developed the backend in Node JS. Implemented core business logic.",
-                "Integreated the app with the backend.",
+                "Desinged Models in MongoDB to support business logic.",
+                "Integrated the app with the backend.",
+                "Deployed Backend to GCP",
             ],
         },
         {
