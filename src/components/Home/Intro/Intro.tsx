@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export const Intro: React.FC = () => {
-  const name = "Sushant";
+  const name = "Sushant Mishra";
   const [displaytext, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
