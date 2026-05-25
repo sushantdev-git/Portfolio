@@ -1,5 +1,6 @@
 import React from "react";
 import IconAddress from "../../../IconAddress";
+import ReactMarkdown from "react-markdown";
 
 interface ExperienceItem {
   profile: string;
@@ -60,7 +61,42 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, upc, lwc })
         <ul className="pl-5 flex flex-col gap-2 mt-2 list-disc">
           {experience.description.map((desc, i) => (
             <li key={i} className="text-muted text-[0.95rem] leading-relaxed">
-              {desc}
+              <ReactMarkdown
+                components={{
+                  code({ children }) {
+                    const content = String(children).trim();
+                    const isTech = experience.techStack.some(
+                      (tech) => tech.toLowerCase() === content.toLowerCase()
+                    );
+                    
+                    if (isTech) {
+                      return (
+                        <span className="inline-block px-1.5 py-0.5 mx-0.5 bg-brand-green/10 border border-brand-green/20 rounded-sm font-heading font-extrabold text-[0.82rem] text-brand-green dark:bg-brand-green/20 dark:border-brand-green/30 dark:text-green-300 transition-all duration-200 hover:bg-brand-green/20">
+                          {content}
+                        </span>
+                      );
+                    }
+                    
+                    return (
+                      <code className="inline-block px-1.5 py-0.5 mx-0.5 bg-brand-blue/10 border border-brand-blue/20 rounded font-mono font-bold text-[0.82rem] text-brand-blue dark:bg-brand-blue/20 dark:border-brand-blue/30 dark:text-blue-300">
+                        {content}
+                      </code>
+                    );
+                  },
+                  strong({ children }) {
+                    return (
+                      <strong className="font-extrabold text-foreground dark:text-white">
+                        {children}
+                      </strong>
+                    );
+                  },
+                  p({ children }) {
+                    return <span className="inline">{children}</span>;
+                  }
+                }}
+              >
+                {desc}
+              </ReactMarkdown>
             </li>
           ))}
         </ul>

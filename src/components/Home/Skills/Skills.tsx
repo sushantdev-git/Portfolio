@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import SkillProgress from "./SkillProgress";
 
 interface Skill {
   name: string;
@@ -36,6 +38,44 @@ const skillList: Skill[] = [
   { name: "Swift / iOS", icon: "icons/swift.png", level: "Intermediate", mastery: 75, paths: ["core"] },
 ];
 
+interface SkillCardProps {
+  skill: Skill;
+  getBadgeClass: (level: string) => string;
+  variants: any;
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({ skill, getBadgeClass, variants }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <motion.div 
+      variants={variants}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-5 bg-card border-2 border-border rounded-lg shadow-tactile-flat flex flex-col gap-4 cursor-default hover:border-active hover:shadow-tactile"
+    >
+      <div className="flex items-center justify-between w-full">
+        <div className="flex items-center gap-3">
+          <img
+            src={skill.icon}
+            alt={skill.name}
+            className="w-8 h-8 object-contain rounded-sm bg-background p-1 select-none"
+            onError={(e) => {
+              (e.target as HTMLElement).style.display = "none";
+            }}
+          />
+          <span className="font-heading font-bold text-[1.1rem] text-foreground">{skill.name}</span>
+        </div>
+        <span className={getBadgeClass(skill.level)}>{skill.level}</span>
+      </div>
+
+      <SkillProgress mastery={skill.mastery} level={skill.level} isHovered={isHovered} />
+    </motion.div>
+  );
+};
+
 const Skills: React.FC = () => {
   const [activePath, setActivePath] = useState<string>("web");
 
@@ -50,7 +90,7 @@ const Skills: React.FC = () => {
   );
 
   const getBadgeClass = (level: string) => {
-    const baseClass = "text-[0.75rem] font-extrabold font-heading px-2 py-0.5 rounded-full border-2 text-center uppercase tracking-wide";
+    const baseClass = "text-[0.75rem] font-extrabold font-heading px-2 py-0.5 rounded-full border-2 text-center uppercase tracking-wide select-none";
     switch (level) {
       case "Advanced":
         return `${baseClass} bg-brand-green/10 text-brand-green border-brand-green`;
@@ -61,24 +101,36 @@ const Skills: React.FC = () => {
     }
   };
 
-  const getProgressFillClass = (level: string) => {
-    const base = "h-full rounded-full transition-all duration-500";
-    switch (level) {
-      case "Advanced":
-        return `${base} bg-brand-green`;
-      case "Intermediate":
-        return `${base} bg-brand-blue`;
-      default:
-        return `${base} bg-brand-orange`;
-    }
-  };
-
   const getPathBtnClass = (id: string) => {
     const isActive = activePath === id;
     const base = "font-heading font-bold text-sm px-6 py-3 rounded-full border-2 border-border bg-card text-muted cursor-pointer shadow-tactile-flat hover:border-active hover:text-foreground hover:bg-card-hover transition-all duration-200 sm:px-4 sm:py-2.5 select-none";
     return isActive
       ? `${base} !text-brand-blue !bg-card !border-active shadow-tactile -translate-y-[2px]`
       : base;
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 15
+      }
+    },
   };
 
   return (
@@ -100,39 +152,22 @@ const Skills: React.FC = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5 w-full" key={activePath}>
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+        className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5 w-full" 
+        key={activePath}
+      >
         {filteredSkills.map((skill) => (
-          <div key={skill.name} className="p-5 bg-card border-2 border-border rounded-md shadow-tactile-flat flex flex-col gap-4 transition-all duration-200 cursor-default hover:border-active hover:shadow-tactile hover:-translate-y-1">
-            <div className="flex items-center justify-between w-full">
-              <div className="flex items-center gap-3">
-                <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  className="w-8 h-8 object-contain rounded-sm bg-background p-1"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
-                />
-                <span className="font-heading font-bold text-[1.1rem] text-foreground">{skill.name}</span>
-              </div>
-              <span className={getBadgeClass(skill.level)}>{skill.level}</span>
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <div className="flex justify-between text-[0.85rem] font-semibold text-muted">
-                <span>Mastery</span>
-                <span>{skill.mastery}%</span>
-              </div>
-              <div className="w-full h-2 bg-border rounded-full overflow-hidden border border-border">
-                <div
-                  className={getProgressFillClass(skill.level)}
-                  style={{ width: `${skill.mastery}%` }}
-                />
-              </div>
-            </div>
-          </div>
+          <SkillCard 
+            key={skill.name} 
+            skill={skill} 
+            getBadgeClass={getBadgeClass} 
+            variants={cardVariants}
+          />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

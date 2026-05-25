@@ -19,12 +19,12 @@ const Experience: React.FC = () => {
       duration: "Jan 2023 - Present",
       techStack: ["NestJS", "Vue.js", "ProseMirror", "Yjs", "Django", "AWS", "Redis", "LangGraph"],
       description: [
-        "Architected an in-house collaborative real-time editor using NestJS, WebSockets, Yjs (CRDT), and ProseMirror with snapshot diffing and state-vector synchronization, achieving eventual consistency and horizontal scalability via Redis ($30,000/year cost savings).",
-        "Developed a high-performance, Excel-like web platform ('Spreading') using Vue.js and Handsontable, engineering a custom graph-based lexer/parser evaluation engine powered by Topological Sort to resolve complex formula dependencies.",
-        "Engineered 'Quant Scrub,' an idempotent Django/Celery workflow utilizing AWS Textract for fault-tolerant, resumable data extraction, reducing operational costs by 10x and boosting entry efficiency by 80%.",
-        "Architected GenAI workflows on Amazon Bedrock with LangGraph and Claude to automate credit memo drafting and borrower application template generation from PDFs.",
-        "Built a structured document tree engine converting config files to ProseMirror formats (boosting underwriting productivity by 60%), and integrated DataDog for microservice socket and throughput observability.",
-        "Managed Grain iOS app migration with custom Swift automated configuration panels, establishing CI/CD automated App Store deployments using Fastlane and GitHub Actions."
+        "Architected an in-house collaborative real-time editor using `NestJS`, `WebSockets`, `Yjs` (CRDT), and `ProseMirror` with snapshot diffing and state-vector synchronization, achieving eventual consistency and horizontal scalability via `Redis` (**$30,000/year cost savings**).",
+        "Developed a high-performance, Excel-like web platform ('Spreading') using `Vue.js` and `Handsontable`, engineering a custom graph-based lexer/parser evaluation engine powered by `Topological Sort` to resolve complex formula dependencies.",
+        "Engineered 'Quant Scrub,' an idempotent `Django`/`Celery` workflow utilizing `AWS Textract` for fault-tolerant, resumable data extraction, reducing operational costs by **10x** and boosting entry efficiency by **80%**.",
+        "Architected GenAI workflows on `Amazon Bedrock` with `LangGraph` and `Claude` to automate credit memo drafting and borrower application template generation from PDFs.",
+        "Built a structured document tree engine converting config files to `ProseMirror` formats (boosting underwriting productivity by **60%**), and integrated `DataDog` for microservice socket and throughput observability.",
+        "Managed **Grain** iOS app migration with custom `Swift` automated configuration panels, establishing CI/CD automated App Store deployments using `Fastlane` and `GitHub Actions`."
       ],
     },
     {
@@ -33,9 +33,9 @@ const Experience: React.FC = () => {
       duration: "August 2022 - Present",
       techStack: ["Flutter", "NodeJs", "MongoDB", "AWS", "Firebase", "GCP"],
       description: [
-        "Spearheaded mobile development, crafting the responsive Flutter app client architecture and managing state distributions.",
-        "Developed scalable backends using Node.js, engineering modular MongoDB database models to support core marketplace logic.",
-        "Integrated cross-platform APIs, third-party authentication services, payment workflows, and cloud deployments on GCP and AWS."
+        "Spearheaded mobile development, crafting the responsive `Flutter` app client architecture and managing state distributions.",
+        "Developed scalable backends using `Node.js`, engineering modular `MongoDB` database models to support core marketplace logic.",
+        "Integrated cross-platform APIs, third-party authentication services, payment workflows, and cloud deployments on `GCP` and `AWS`."
       ],
     },
   ];
