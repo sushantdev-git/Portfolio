@@ -18,7 +18,7 @@ export type ViewerAction =
   | { type: 'PDF_VISIBLE'; pdf: string }
   | { type: 'PDF_HIDDEN'; pdf: string | null };
 
-const reducer = (state: ViewerState = initialState, action: ViewerAction): ViewerState => {
+const reducer = (state: ViewerState = initialState, action: any): ViewerState => {
   switch (action.type) {
     case 'IMG_VISIBLE':
       console.log('image viewer visible');
