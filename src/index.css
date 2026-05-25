@@ -1,71 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Crisp Brilliant.org Light Palette */
+  --bg-app: #FAFBFD;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-tertiary: #9CA3AF;
+
+  --border-color: #E5E7EB;
+  --border-active: #1F2937;
+
+  --shadow-flat: 0px 4px 0px 0px #E5E7EB;
+  --shadow-active: 0px 6px 0px 0px #1F2937;
+  
+  --color-primary: #2B70C9;      /* Brilliant Blue */
+  --color-primary-hover: #1e5ba9;
+  --color-success: #00A86B;      /* Brilliant Green */
+  --color-success-hover: #008f5a;
+  --color-warning: #FF9900;      /* Brilliant Orange/Yellow */
+  --color-warning-hover: #e08700;
+  --color-danger: #EF4444;       /* Brilliant Red */
+  
+  --border-radius-lg: 16px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+  
+  --transition-speed: 0.2s;
 }
 
-body {
-  margin: 0;
-  font-family: 'Source Code Pro', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:#23272D;
+[data-theme='dark'] {
+  /* Elegant slate dark mode matching the Brilliant dark-palette feel */
+  --bg-app: #0F172A;
+  --bg-card: #1E293B;
+  --bg-card-hover: #334155;
+  
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #9CA3AF;
+
+  --border-color: #334155;
+  --border-active: #F3F4F6;
+
+  --shadow-flat: 0px 4px 0px 0px #1E293B;
+  --shadow-active: 0px 6px 0px 0px #F3F4F6;
+  
+  --color-primary: #3B82F6;
+  --color-primary-hover: #60A5FA;
+  --color-success: #10B981;
+  --color-success-hover: #34D399;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #FBBF24;
 }
 
-html, body, #root{ 
-  min-height: 100vh;
-  overflow: auto;
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply text-foreground font-extrabold tracking-tight;
+  }
 }
 
-h1{
-  font-size: 45px;
-}
-h2{
-  font-size: 35px;
-}
-h3{
-  font-size: 20px;
-}
-p{
-  font-size: 17px;
-  font-family: sans-serif;
-  color: #A8B2D1;
-}
-
-
-::-webkit-scrollbar{
+/* Custom Scrollbars */
+::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
 ::-webkit-scrollbar-thumb {
-  background: cadetblue; 
-  border-radius: 10px;
+  background: var(--border-color);
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--bg-app);
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
 ::selection {
-  color: cadetblue;
-  background: rgba(255, 255, 255, 0.178);
-}
-
-
-@media (max-width:860px) {
-  h1{
-    font-size: 60px;
-  }
-  h2{
-      font-size: 30px;
-  }
-  h3{
-      font-size: 20px;
-  }
-  p{
-      font-size: 15px;
-  }
-}
-@media (max-width:500px) {
-  ::-webkit-scrollbar{
-    width: 3px;
-  }
+  color: white;
+  background: var(--color-primary);
 }
