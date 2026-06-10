@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         theme={theme} 
         toggleTheme={toggleTheme} 
       />
-      <div className="min-h-[calc(100vh-70px)] w-full mt-[70px] p-6 max-w-[1200px] flex flex-col md:mt-[60px] md:p-4">
+      <div className="min-h-[calc(100vh-70px)] w-full mt-[70px] px-6 py-6 max-w-[1200px] flex flex-col md:mt-[60px] md:px-4 md:py-4 sm:px-3 sm:py-3">
         {children}
       </div>
       <SidePanel 

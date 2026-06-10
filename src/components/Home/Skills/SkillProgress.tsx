@@ -9,12 +9,12 @@ interface SkillProgressProps {
 
 export const SkillProgress: React.FC<SkillProgressProps> = ({ mastery, level, isHovered }) => {
   const count = useMotionValue(0);
-  
-  // Clamp display value strictly between 0 and 100 to prevent negative numbers or exceeding 100
-  const rounded = useTransform(count, (latest) => {
-    return Math.max(0, Math.min(100, Math.round(latest)));
-  });
-  
+
+  // Clamp display value strictly between 0 and 100
+  const rounded = useTransform(count, (latest) =>
+    Math.max(0, Math.min(100, Math.round(latest)))
+  );
+
   const [displayVal, setDisplayVal] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
 
@@ -24,15 +24,12 @@ export const SkillProgress: React.FC<SkillProgressProps> = ({ mastery, level, is
     return `${clamped}%`;
   });
 
-  // Trigger a new spring bounce when hover enter is detected (isHovered transitions from false to true)
+  // Re-trigger elastic spring on hover enter only
   useEffect(() => {
-    if (isHovered) {
-      setAnimationKey((prev) => prev + 1);
-    }
+    if (isHovered) setAnimationKey((prev) => prev + 1);
   }, [isHovered]);
 
   useEffect(() => {
-    // Reset motion value and velocity to 0
     count.set(0);
     const controls = animate(count, mastery, {
       type: "spring",
@@ -49,12 +46,9 @@ export const SkillProgress: React.FC<SkillProgressProps> = ({ mastery, level, is
 
   const getProgressFillClass = (lvl: string) => {
     switch (lvl) {
-      case "Advanced":
-        return "bg-brand-green";
-      case "Intermediate":
-        return "bg-brand-blue";
-      default:
-        return "bg-brand-orange";
+      case "Advanced":   return "bg-brand-green";
+      case "Intermediate": return "bg-brand-blue";
+      default:           return "bg-brand-orange";
     }
   };
 
@@ -67,13 +61,17 @@ export const SkillProgress: React.FC<SkillProgressProps> = ({ mastery, level, is
         </motion.span>
       </div>
       <div className="w-full h-2.5 bg-border rounded-full overflow-hidden border border-border/80 relative shadow-[inset_0_1px_3px_rgba(0,0,0,0.06)] dark:shadow-[inset_0_1px_3px_rgba(0,0,0,0.3)]">
-        {/* Animated ribbon bar driven directly by count motion value */}
         <motion.div
           className={`${getProgressFillClass(level)} h-full rounded-full relative`}
           style={{ width: widthPercent }}
         >
-          {/* Subtle light sheen reflection for the ribbon stretch */}
-          <span className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0)_100%)] w-full" style={{ mixBlendMode: 'overlay' }} />
+          <span
+            className="absolute inset-0 w-full"
+            style={{
+              background: "linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%)",
+              mixBlendMode: "overlay",
+            }}
+          />
         </motion.div>
       </div>
     </div>

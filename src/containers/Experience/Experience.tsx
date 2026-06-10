@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
         "Engineered 'Quant Scrub,' an idempotent `Django`/`Celery` workflow utilizing `AWS Textract` for fault-tolerant, resumable data extraction, reducing operational costs by **10x** and boosting entry efficiency by **80%**.",
         "Architected GenAI workflows on `Amazon Bedrock` with `LangGraph` and `Claude` to automate credit memo drafting and borrower application template generation from PDFs.",
         "Built a structured document tree engine converting config files to `ProseMirror` formats (boosting underwriting productivity by **60%**), and integrated `DataDog` for microservice socket and throughput observability.",
-        "Managed **Grain** iOS app migration with custom `Swift` automated configuration panels, establishing CI/CD automated App Store deployments using `Fastlane` and `GitHub Actions`."
+        "Managed **Grain** iOS app migration with custom `Swift` automated configuration panels, establishing CI/CD automated App Store deployments using `Fastlane` and `GitHub Actions`.",
       ],
     },
     {
@@ -35,13 +35,13 @@ const Experience: React.FC = () => {
       description: [
         "Spearheaded mobile development, crafting the responsive `Flutter` app client architecture and managing state distributions.",
         "Developed scalable backends using `Node.js`, engineering modular `MongoDB` database models to support core marketplace logic.",
-        "Integrated cross-platform APIs, third-party authentication services, payment workflows, and cloud deployments on `GCP` and `AWS`."
+        "Integrated cross-platform APIs, third-party authentication services, payment workflows, and cloud deployments on `GCP` and `AWS`.",
       ],
     },
   ];
 
   return (
-    <div className="w-full max-w-[800px] mx-auto mt-10 flex flex-col gap-8 md:mt-5">
+    <div className="w-full max-w-[800px] mx-auto mt-10 flex flex-col gap-8 md:mt-5 sm:mt-2 sm:px-0">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,9 +49,9 @@ const Experience: React.FC = () => {
         transition={{ duration: 0.45 }}
         className="w-full flex flex-col gap-8"
       >
-        <div className="text-center flex flex-col gap-2 mb-2">
-          <h1 className="text-3xl font-heading font-extrabold tracking-tight">Career Pathway</h1>
-          <p className="text-[1.1rem] text-muted">Step-by-step career path, showcasing my engineering experiences and milestones.</p>
+        <div className="text-center flex flex-col gap-2 mb-2 px-2">
+          <h1 className="text-3xl font-heading font-extrabold tracking-tight sm:text-2xl">Career Pathway</h1>
+          <p className="text-[1.1rem] text-muted sm:text-[0.95rem]">Step-by-step career path, showcasing my engineering experiences and milestones.</p>
         </div>
 
         <div className="flex flex-col">
