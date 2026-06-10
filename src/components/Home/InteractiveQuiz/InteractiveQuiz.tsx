@@ -45,7 +45,7 @@ const InteractiveQuiz: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-[800px] mx-auto my-10 p-8 flex flex-col gap-5 bg-card border-2 border-border rounded-lg shadow-tactile-flat hover:border-active hover:shadow-tactile hover:-translate-y-1 active:translate-y-0 active:shadow-tactile-flat transition-all duration-200 sm:p-5">
+    <div className="w-full max-w-[800px] mx-auto my-10 p-8 flex flex-col gap-5 bg-card border-2 border-border rounded-lg shadow-tactile-flat hover:border-active hover:shadow-tactile hover:-translate-y-1 active:translate-y-0 active:shadow-tactile-flat transition-all duration-200 sm:p-4 sm:my-6 sm:gap-4">
       <div className="flex items-center gap-3 flex-wrap">
         <span className="font-heading font-extrabold text-[0.75rem] bg-brand-orange text-white px-2.5 py-1 rounded-full tracking-wider border-[1.5px] border-active shadow-[0_2px_0_var(--border-active)]">
           DAILY TEASER
